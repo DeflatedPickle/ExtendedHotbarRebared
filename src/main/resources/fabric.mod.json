@@ -1,34 +1,37 @@
+
 {
   "schemaVersion": 1,
-  "id": "extendedhotbar",
+  "id": "${id}",
   "version": "${version}",
-  "name": "ExtendedHotbar",
-  "description": "Place the bottom bar of the player's inventory above the hotbar.",
+  "name": "${name}",
+  "description": "${desc}",
   "authors": [
-    "DemonWav"
+    "${author}"
   ],
   "contact": {
-    "sources": "https://github.com/DemonWav/ExtendedHotbar",
-    "homepage": "https://github.com/DemonWav/ExtendedHotbar",
-    "issues": "https://github.com/DemonWav/ExtendedHotbar/issues"
+    "homepage": "${site}",
+    "issues": "${src}/issues",
+    "sources": "${src}"
   },
-  "license": "MIT",
-  "icon": "assets/extendedhotbar/icon.png",
-  "environment": "client",
+  "license": "${license}",
+  "icon": "assets/${id}/icon.png",
+  "environment": "${environment}",
   "entrypoints": {
-    "client": [
-      "com.demonwav.extendedhotbar.client.ExtendedHotbarClient"
-    ],
-    "modmenu": [
-      "com.demonwav.extendedhotbar.client.ExtendedHotbarMenu"
+    "${entry}": [
+      {
+        "adapter": "kotlin",
+        "value": "${group}.${id}.${name}"
+      }
     ]
   },
   "mixins": [
-    "extendedhotbar.mixins.json"
+    "${id}.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.10.8",
-    "minecraft": ["1.16.2", "1.16.3","1.16.4"],
-    "fabric-key-binding-api-v1": "*"
+    "fabricloader": ">=${loader}",
+    "fabric": ">=${fabric}",
+    "fabric-language-kotlin": ">=${adapter}",
+    "minecraft": "${minecraft}",
+    "java": ">=${java}"
   }
 }

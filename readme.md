@@ -1,14 +1,6 @@
-Extended Hotbar
-===============
+# ExtendedHotbarRebared ![Build](https://github.com/DeflatedPickle/ExtendedHotbarRebared/actions/workflows/gradle-build.yml/badge.svg)
+Displays the bottom row of your inventory above your hotbar and allows swapping items between them
 
-![](https://puu.sh/tgmIa/4e96c9ccca.png)
-
-Top bar is the bottom bar of the player's inventory.
-
-* Press `R` to swap the rows
-* Press `Shift-R` to swap only the items in your hand.
-* Press `=` to disable/enable
-
-Controls are configurable in the standard Minecraft controls settings.
-
-Additional configuration is in the mod's menu page. [ModMenu is required for the extra configuration.](https://www.curseforge.com/minecraft/mc-mods/modmenu)
+## History:
+- 1.18 ([DeflatedPickle](https://github.com/DeflatedPickle/ExtendedHotbarRebared), Fabric)
+- 1.11.2-1.16.4 ([DemonWav](https://github.com/DenWav/ExtendedHotbar), LiteLoader/Fabric)
