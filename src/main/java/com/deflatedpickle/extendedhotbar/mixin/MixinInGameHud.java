@@ -18,16 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @SuppressWarnings("UnusedMixin")
 @Mixin(InGameHud.class)
 abstract class MixinInGameHud extends DrawableHelper {
-    @Shadow
-    public int scaledWidth;
-    @Shadow
-    public int scaledHeight;
-
-    @Shadow
-    abstract public void renderHotbarItem(
-            int x, int y, float delta, PlayerEntity entity, ItemStack itemStack, int seed
-    );
-
     @Inject(
             method = "renderHotbar",
             at = @At(
@@ -40,7 +30,7 @@ abstract class MixinInGameHud extends DrawableHelper {
     public void drawTopHotbarBackground(
             float delta, MatrixStack matrix, CallbackInfo info
     ) {
-        Util.INSTANCE.drawTopHotbarBackground(this, matrix, scaledWidth, scaledHeight);
+        Util.INSTANCE.drawTopHotbarBackground((InGameHud) (Object) this, matrix);
     }
 
     @Inject(

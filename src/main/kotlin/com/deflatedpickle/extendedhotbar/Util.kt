@@ -9,12 +9,12 @@ import net.minecraft.entity.player.PlayerEntity
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo
 
 object Util {
-    fun drawTopHotbarBackground(drawableHelper: DrawableHelper, matrixStack: MatrixStack, scaledWidth: Int, scaledHeight: Int) {
+    fun drawTopHotbarBackground(inGameHud: InGameHud, matrixStack: MatrixStack) {
         if (ExtendedHotbarRebared.enabled) {
-            drawableHelper.drawTexture(
+            inGameHud.drawTexture(
                 matrixStack,
-                scaledWidth / 2 - 91,
-                scaledHeight - 22 + ExtendedHotbarRebared.DISTANCE,
+                inGameHud.scaledWidth / 2 - 91,
+                inGameHud.scaledHeight - 22 + ExtendedHotbarRebared.DISTANCE,
                 0, 0,
                 182, 22,
             )
