@@ -44,7 +44,7 @@ object KeyboardHandler {
 
         if (
             client.world == null || client.currentScreen != null ||
-            !MinecraftClient.isHudEnabled() || !ExtendedHotbarRebared.enabled
+            !MinecraftClient.isHudEnabled()
         ) return
 
         val window = client.window.handle
