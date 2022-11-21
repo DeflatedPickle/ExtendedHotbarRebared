@@ -1,8 +1,7 @@
-/* Copyright (c) 2021 DemonWav, DeflatedPickle under the LGPL3 license */
+/* Copyright (c) 2021-2022 DemonWav,DeflatedPickle under the MIT license */
 
 package com.deflatedpickle.extendedhotbar
 
-import net.minecraft.client.gui.DrawableHelper
 import net.minecraft.client.gui.hud.InGameHud
 import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.entity.player.PlayerEntity

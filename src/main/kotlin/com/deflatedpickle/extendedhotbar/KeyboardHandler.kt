@@ -1,13 +1,13 @@
-/* Copyright (c) 2021 DemonWav, DeflatedPickle under the LGPL3 license */
+/* Copyright (c) 2021-2022 DemonWav,DeflatedPickle under the MIT license */
 
 package com.deflatedpickle.extendedhotbar
 
 import com.deflatedpickle.extendedhotbar.ExtendedHotbarRebared.MOD_ID
+import com.mojang.blaze3d.platform.InputUtil.Type.KEYSYM
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.minecraft.client.MinecraftClient
-import net.minecraft.client.option.KeyBinding
-import net.minecraft.client.util.InputUtil
+import net.minecraft.client.option.KeyBind
 import org.lwjgl.glfw.GLFW.GLFW_KEY_EQUAL
 import org.lwjgl.glfw.GLFW.GLFW_KEY_LEFT_SHIFT
 import org.lwjgl.glfw.GLFW.GLFW_KEY_R
@@ -16,16 +16,16 @@ import org.lwjgl.glfw.GLFW.GLFW_PRESS
 import org.lwjgl.glfw.GLFW.glfwGetKey
 
 object KeyboardHandler {
-    private val swapKeyBinding: KeyBinding = KeyBinding(
+    private val swapKeyBinding: KeyBind = KeyBind(
         "key.$MOD_ID.switch",
-        InputUtil.Type.KEYSYM,
+        KEYSYM,
         GLFW_KEY_R,
         "key.$MOD_ID"
     )
 
-    private val toggleKeyBinding = KeyBinding(
+    private val toggleKeyBinding = KeyBind(
         "key.$MOD_ID.toggle",
-        InputUtil.Type.KEYSYM,
+        KEYSYM,
         GLFW_KEY_EQUAL,
         "key.$MOD_ID"
     )
